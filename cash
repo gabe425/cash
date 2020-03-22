@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <cs50.h>
+
+
+int main(void)
+{
+        float x;
+        float q = 0.25;
+        float d = 0.10;
+        float n = 0.05;
+        float p = 0.01;
+        int i = 0;
+        do
+        {
+
+        x = get_float("change owed: ");
+
+        printf("%.2f", x);
+        printf("\n");    
+
+        }
+        while (x <= 0.00);
+        
+        
+
+            
+            if (x >= q)
+
+            do
+            {   
+                i++;
+                printf("%.2f", x - q);
+                printf("\n");
+                x = x - q;
+            }
+            while (x >= q);
+
+            
+            
+            if (x >= d)   
+            
+            do
+            {
+                i++;
+                printf("%.2f", x - d);
+                printf("\n");
+                x = x - d;
+            }
+            while (x >= d);
+
+            if (x >= n)
+
+            do 
+            {
+                i++;
+                printf("%.2f", x - n);
+                printf("\n");
+                x = x - n;
+            }       
+            while (x >= n);
+
+            if (x >= p)
+
+
+            do
+            {
+                i++;
+                printf("%.2f", x - p);
+                printf("\n");
+                x = x - p;
+
+            }
+            while (x >= p);  
+                
+        
+
+printf("\n");
+printf("%d", i);
+printf("\n");
+printf("%f", x);
+
+}
